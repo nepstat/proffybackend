@@ -1,0 +1,23 @@
+{
+  "name": "proffybackend",
+  "version": "1.0.0",
+  "description": "<a href=\"https://nepstat.github.io/proffyfrontend/\">DEMO CLICK HERE</a>",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nepstat/proffybackend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nepstat/proffybackend/issues"
+  },
+  "homepage": "https://github.com/nepstat/proffybackend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

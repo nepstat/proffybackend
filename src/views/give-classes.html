@@ -17,7 +17,7 @@
     <div id="container">
         <header class="page-header">
             <div class="top-bar-container">
-                <a href="index.html">
+                <a href="/">
                     <img src="./img/icons/back.svg" alt="back">
                 </a>
                 <img src="./img/logo.svg" alt="Proffy">
@@ -30,7 +30,7 @@
         </header>
 
         <main>
-            <form id="create-class" action="">
+            <form id="create-class">
                 <fieldset>
                     <legend>Seus dados</legend>
 
@@ -66,16 +66,9 @@
                         <label for="subject">Matéria</label>
                         <select name="subject" id="subject" required>
                             <option value="">Seleciona uma opção</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação Física</option>
-                            <option value="5">Física</option>
-                            <option value="6">Geografia</option>
-                            <option value="8">História</option>
-                            <option value="8">Matemática</option>
-                            <option value="9">Português</option>
-                            <option value="10">Química</option>
+                            {%for subject in subjects %}
+                                <option value="{{loop.index}}">{{subject}}</option>
+                            {%endfor%}
                         </select>
                     </div>
 
@@ -83,7 +76,7 @@
                         <label for="cost">
                             Custo da sua hora/aula <small>(R$)</small>
                         </label>
-                        <input type="number" name="cost" id="cost" required>
+                        <input type="number" name="cost" id="cost" step="any" required>
                     </div>
                 </fieldset>
 
@@ -98,13 +91,10 @@
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday[]" required>
                                 <option value="">Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda-Feira</option>
-                                <option value="2">Terça-Feira</option>
-                                <option value="3">Quarta-Feira</option>
-                                <option value="4">Quinta-Feira</option>
-                                <option value="5">Sexta-Feira</option>
-                                <option value="6">Sábado</option>
+                                
+                            {%for weekday in weekdays %}
+                                    <option value="{{loop.index0}}">{{weekday}}</option>
+                            {%endfor%}
                             </select>
                         </div>
 
