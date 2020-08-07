@@ -41,6 +41,12 @@
     width: 90%;
 }
 
+#page-study main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
+
 .teacher-item {
     background-color: var(--color-box-base);
     /*  */
@@ -175,6 +181,8 @@
         max-width: 740px;
         margin: 0 auto;
     }
+
+    
 
     #search-teachers .select-block {
         margin-bottom: 0;
